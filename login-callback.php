@@ -120,29 +120,8 @@ imagejpeg($im, 'water mark.jpg');
 
 imagedestroy($im);
 //copy($im,"wm.jpg");copy($im,'bash.jpg');
-//header('Location: http://localhost/water mark.jpg');
+header('Location: http://localhost/changeProfilePic.php');
 
-//At the time of writing it is necessary to enable upload support in the Facebook SDK, you do this with the line:
-//$fb->setFileUploadSupport(true);
-  // init app with app id (APPID) and secret (SECRET)
-  
-  //$session = $fb->getUser();
-  
-  try {
-  $session = $helper->getSessionFromRedirect();
-} catch(FacebookRequestException $ex) {
-  // When Facebook returns an error
-  echo $ex;
-} 
-
-$request = new Facebook\FacebookRequest(
-  $session,
-  'GET',
-  '/me/albums'
-);
-$response = $request->execute();
-$graphObject = $response->getGraphObject();
-/* handle the result */
 
 }
 
